@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<title>Contact</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/main.css">
+<script type="text/javascript" src="scripts/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/navbar.js"></script>
+<script type="text/javascript" src="scripts/loading_screen.js"></script>
+<script type="text/javascript" src="scripts/utilitati.js"></script>
+
+</head>
+
+<body>
+
+<div class="load-screen" id="screen-loading">
+    <div class="loading">
+        <span>Loading...</span>
+    </div>
+</div>
+
+<div class="header">
+	<h1>The Solar System</h1>
+	<p>Cum sa ne contactati</p>
+</div>
+
+<div id="navbarHTML"></div>
+
+<div id="googleMap" style="width:100%;height:580px;"></div>
+
+<div class="card">
+    <p>You can contact us at UTM. Somewhere inside. Probably. Mayhaps.
+    <img src="images/icons/qr.png"></p>
+    <p id="exchange"></p>
+    <p id="tempB"></p>
+    <p id="tempNY"></p>
+    <p id="tempP"></p>
+</div>
+
+<script>
+function myMap() {
+var mapProp= {
+    center: new google.maps.LatLng(44.414283, 26.114338),
+        zoom: 20,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+};
+var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAxJ3ZTJ29j3Wa13bJ9GNNv2KHV7e4A1Ug&callback=myMap"></script>
+
+
+</body>
+</html>
